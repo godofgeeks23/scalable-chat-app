@@ -6,17 +6,26 @@ const PORT = 3000;
 
 const app = express();
 const httpServer = http.createServer(app);
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  cors: {
+    origin: "*",
+  },
+});
 
 io.on("connection", (socket) => {
   console.log("New client connected -", socket.id);
-  io.emit("message", `Everyone please welcome ${socket.id} to the chat!`);
+  io.emit("message", `Server: Everyone please welcome ${socket.id} to the chat!`);
+
+  socket.on("message", (message) => {
+    console.log("Received message -", message);
+    io.emit("message", socket.id + " says: "+message);
+  });
 });
 
 io.on("disconnect", (socket) => {
   console.log("Client disconnected -", socket.id);
 });
 
-httpServer.listen(3000, () => {
+httpServer.listen(PORT, () => {
   console.log("Server is running on port", PORT);
 });
