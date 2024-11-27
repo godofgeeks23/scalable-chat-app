@@ -14,16 +14,19 @@ const io = new Server(httpServer, {
 
 io.on("connection", (socket) => {
   console.log("New client connected -", socket.id);
-  io.emit("message", `Server: Everyone please welcome ${socket.id} to the chat!`);
+  io.emit(
+    "message",
+    `Server: Everyone please welcome ${socket.id} to the chat!`
+  );
+
+  io.on("disconnect", (socket) => {
+    console.log("Client disconnected -", socket.id);
+  });
 
   socket.on("message", (message) => {
     console.log("Received message -", message);
-    io.emit("message", socket.id + " says: "+message);
+    io.emit("message", socket.id + " says: " + message);
   });
-});
-
-io.on("disconnect", (socket) => {
-  console.log("Client disconnected -", socket.id);
 });
 
 httpServer.listen(PORT, () => {
