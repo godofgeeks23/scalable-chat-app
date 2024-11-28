@@ -1,10 +1,8 @@
 import React from "react";
 
-function Message({msg}) {
+function Message({ msg }) {
   return (
-    <li className="bg-gray-800 text-white p-2 rounded-md shadow-sm">
-      {msg}
-    </li>
+    <li className="bg-gray-800 text-white p-2 rounded-md shadow-sm">{msg}</li>
   );
 }
 
