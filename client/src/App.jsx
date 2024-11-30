@@ -57,7 +57,7 @@ function App() {
         <h1 className="text-4xl font-bold text-white mb-6">Chat App</h1>
         <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-2xl items-center">
           <p className="text-gray-400 text-sm mb-4">
-            Status: Connected to WS Server - {connected ? "Yes" : "No"}
+            Status: Connection with WS Server - {connected ? "Yes" : "No"}
           </p>
           <div className="flex items-center mb-4">
             <input
