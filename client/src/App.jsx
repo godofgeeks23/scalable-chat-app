@@ -80,7 +80,7 @@ function App() {
               onClick={clearMessages}
               className="ml-4 flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium px-4 py-2 shadow-md transition duration-300"
             >
-              Clear All Messages 🧹
+              Clear All 🧹
             </button>
           </div>
           <ul className="bg-gray-700 p-4 rounded-lg overflow-y-auto h-96 space-y-2">
