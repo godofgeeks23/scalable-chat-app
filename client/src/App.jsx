@@ -11,8 +11,10 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const inputRef = useRef(null);
 
+  const PORT = 3000;
+
   useEffect(() => {
-    const thissocket = io("http://localhost:3000");
+    const thissocket = io("http://localhost:" + PORT);
 
     thissocket.on("connect", () => {
       console.log("Connected to server with id", thissocket.id);
