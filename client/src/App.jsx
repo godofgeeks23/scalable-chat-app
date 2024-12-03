@@ -47,6 +47,7 @@ function App() {
     inputRef.current?.focus();
   };
 
+  // handle pressing of enter button to send messagee
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       sendMessage();
