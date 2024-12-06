@@ -1,3 +1,5 @@
+# Scalable Chat App
+
 Start WebSocket (Socket.IO) server
 
 ```
