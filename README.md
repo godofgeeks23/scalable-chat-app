@@ -13,14 +13,14 @@ npm install
 
 ## Run
 
-Start WebSocket (Socket.IO) server
+### Start WebSocket (Socket.IO) server
 
 ```
 cd server
 node index.js
 ```
 
-Start the client
+### Start the client
 
 ```
 cd client
