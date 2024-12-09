@@ -8,7 +8,7 @@
 git clone https://github.com/godofgeeks23/scalable-chat-app.git
 ```
 
-Install dependencies
+### Install dependencies
 
 ```
 cd server
