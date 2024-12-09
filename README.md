@@ -2,6 +2,12 @@
 
 ## Setup
 
+### Clone the repository
+
+```
+git clone https://github.com/godofgeeks23/scalable-chat-app.git
+```
+
 Install dependencies
 
 ```
